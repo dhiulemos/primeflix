@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #121212;
+  color: #fff;
+  height: 8rem;
+  padding: 0 5%;
+  width: 100%;
+}
+
+header a {
+  display: flex;
+  width: fit-content;
+}
+
+.logo {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.favorites {
+  font-size: 1.4rem;
+}

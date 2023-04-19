@@ -1,0 +1,59 @@
+.playing-now {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 6rem 0;
+
+  .movies-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem 2rem;
+    width: 100%;
+
+    /* Resposive */
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1280px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (min-width: 1440px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  .movie {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .movie .image {
+    margin-bottom: 1.5rem;
+  }
+
+  .movie .short-informations {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .movie .movie-name {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .movie .date {
+    font-size: 1.4rem;
+    color: #707070;
+  }
+}

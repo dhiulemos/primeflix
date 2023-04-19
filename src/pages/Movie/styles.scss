@@ -1,0 +1,76 @@
+.page-movie {
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  @media (min-width: 1024px) {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .overview {
+    display: flex;
+    flex-direction: column;
+    background-color: #010101;
+    border-radius: 1rem;
+    color: #ffffff;
+    margin: auto;
+    padding: 4rem;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      max-width: 1440px;
+    }
+  }
+
+  .overview .image {
+    @media (min-width: 768px) {
+      max-width: 32rem;
+    }
+  }
+
+  .overview .description {
+    padding-top: 4rem;
+
+    @media (min-width: 992px) {
+      padding-top: 0;
+      padding-left: 4rem;
+    }
+
+    > .title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    > .informations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 1.4rem;
+      margin-bottom: 3rem;
+    }
+
+    > .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    > .actions .action {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    > .sinopse {
+      max-width: 68rem;
+    }
+    > .sinopse h3 {
+      margin-bottom: 1rem;
+    }
+
+    > .sinopse p {
+      font-size: 1.5rem;
+    }
+  }
+}

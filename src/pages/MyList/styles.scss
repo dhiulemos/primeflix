@@ -1,0 +1,65 @@
+.my-list {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.my-list > .title {
+  text-align: center;
+}
+
+.my-list .my-card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.my-list .my-card {
+  display: flex;
+  background: #010101;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+
+  > .image {
+    max-width: 15rem;
+  }
+
+  > .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding-left: 4rem;
+  }
+
+  > .information .movie-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  > .information .description {
+    font-size: 1.5rem;
+  }
+
+  > .information .actions {
+    display: flex;
+    justify-content: space-between;
+
+    > a,
+    > button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.4rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: darkcyan;
+      }
+    }
+  }
+}

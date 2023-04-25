@@ -1,10 +1,12 @@
 import "./styles.scss";
 
 import React from "react";
+
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { MdMovie, MdFavorite, MdFavoriteBorder } from "react-icons/md";
+import { toast } from "react-toastify";
 
 import api from "../../services/api";
 
@@ -69,13 +71,17 @@ const Movie = () => {
 
       localStorage.setItem("@primeflix", JSON.stringify(myList));
       setMovieIsSaved(false);
+
+      toast.success("Filme removido da minha lista!");
       return;
     }
 
     // add the movie in to my list
     myList.push(movie);
     localStorage.setItem("@primeflix", JSON.stringify(myList));
+
     setMovieIsSaved(true);
+    toast.success("Filme adicionado à minha lista!");
   };
 
   return (
@@ -121,7 +127,7 @@ const Movie = () => {
               ) : (
                 <>
                   <MdFavoriteBorder fontSize="2.4rem" />
-                  Adicionar
+                  Adicionar à lista
                 </>
               )}
             </button>

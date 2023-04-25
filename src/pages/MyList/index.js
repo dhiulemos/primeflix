@@ -3,6 +3,7 @@ import "./styles.scss";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdInfo, MdDelete } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const MyList = () => {
   const [movieList, setMovieList] = useState([]);
@@ -25,6 +26,8 @@ const MyList = () => {
 
     setMovieList(myList);
     localStorage.setItem("@primeflix", JSON.stringify(myList));
+
+    toast.success("Filme removido da minha lista.");
   };
 
   return (

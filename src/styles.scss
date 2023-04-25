@@ -1,4 +1,21 @@
 /* Normalize */
+:root {
+  --toastify-font-family: "Open Sans", sans-serif;
+  --toastify-icon-color-success: #8c89b6;
+  --toastify-color-progress-success: linear-gradient(
+    to right,
+    #8c89b6,
+    #008b8b,
+    #70e3f0,
+    #34aadc,
+    #00d4ff
+  );
+}
+
+.Toastify {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
 
 * {
   margin: 0;
